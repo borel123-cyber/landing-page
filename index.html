@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS</title>
+  <!-- CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg {
+        background-image: url('https://images.unsplash.com/photo-1580094333632-438bdc04f79f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+    .contact-bg {
+        background-image: url('https://images.unsplash.com/photo-1520942702018-0862200e6873?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- ######################### -->
+    <!-- Navigation -->
+    <!-- ####################### -->
+    <nav class="bg-gray-800 bg-opacity-75 fixed w-full z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="./Logo-02.png" alt="Logo">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#">
+                  Accueil
+                </a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#">
+                  Destination
+                </a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#">
+                  Offre
+                </a>
+                <a class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="#">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
+              <box-icon name='menu' class="h-6 w-6 menu-icon"></box-icon>
+               <box-icon name='x' class="h-6 w-6 close-icon hidden"></box-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Accueil
+          </a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Destination
+          </a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Offre
+          </a>
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Contact
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ######################### -->
+    <!-- Hero Section -->
+    <!-- ####################### -->
+    <section class="relative h-screen flex justify-center items-center hero-bg bg-fixed bg-center bg-cover">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative text-center p-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+          Decouvrez le Monde avec Nous
+        </h1>
+        <p class="text-lg md:text-2xl mb-8 text-white">
+          Voyagez vers des destinations de reve avec des offres incroyables.
+        </p>
+        <button class="bg-red-500 text-white px-6 py-3 rounded-full font-semibold animate-pulse">
+          Reservez maintenant
+        </button>
+      </div>
+    </section>
+
+    <!-- ######################### -->
+    <!-- Galerie avec 2 sections: 1 section title et 1 section photo-->
+    <!-- ####################### -->
+
+    <!-- section title -->
+    <section class="text-center py-8">
+      <h2 class="text-4xl text-red-600 uppercase font-black mb-2">
+        Galerie d'inspiration
+      </h2>
+      <p class="text-lg text-gray-600">
+        Decouvrez nos collections uniques et trouvez l'inspiration pour vos projets
+      </p>
+    </section>
+
+    <!-- section photo -->
+     <section class="w-full max-w-[1200px] m-auto p-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- card 1-->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+        <img src="https://plus.unsplash.com/premium_photo-1664472706956-42f42184f7a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2UlMjBjaGljJTIwZHUlMjBsaWV1JTIwZGUlMjB2b3lhZ2V8ZW58MHx8MHx8fDA%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Titre 1</h2>
+          <p class="text-gray-700 mb-4">Description de l'image</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-center">Visitez</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-3xl">
+          100$
+        </div>
+        </div>
+        <!-- card 2-->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+        <img src="https://images.unsplash.com/photo-1759406014185-e22d22b0cf12?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW1hZ2UlMjBjaGljJTIwZHUlMjBsaWV1JTIwZGUlMjB2b3lhZ2V8ZW58MHx8MHx8fDA%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Tour Eiffel</h2>
+          <p class="text-gray-700 mb-4">Decouvrez la tour Eiffel de Paris</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-center">Visitez</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-3xl">
+          100$
+        </div>
+        </div>
+        <!-- card 3-->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+        <img src="https://images.unsplash.com/photo-1733123663490-37fbee4b3d52?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW1hZ2UlMjBjaGljJTIwZHUlMjBsaWV1JTIwZGUlMjB2b3lhZ2V8ZW58MHx8MHx8fDA%3D" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Titre 3</h2>
+          <p class="text-gray-700 mb-4">Description de l'image</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-center">Visitez</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-3xl">
+          100$
+        </div>
+        </div>
+        <!-- card 4-->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+        <img src="https://images.unsplash.com/photo-1741245472300-caf34efb12cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGltYWdlJTIwY2hpYyUyMGR1JTIwbGlldSUyMGRlJTIwdm95YWdlfGVufDB8fDB8fHww" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Titre 4</h2>
+          <p class="text-gray-700 mb-4">Description de l'image</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-center">Visitez</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-3xl">
+          100$
+        </div>
+        </div>
+        <!-- card 5-->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+        <img src="https://images.unsplash.com/photo-1782071777465-573e4c480988?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGltYWdlJTIwY2hpYyUyMGR1JTIwbGlldSUyMGRlJTIwdm95YWdlfGVufDB8fDB8fHww" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Titre 5</h2>
+          <p class="text-gray-700 mb-4">Description de l'image</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-center">Visitez</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-3xl">
+          100$
+        </div>
+        </div>
+        <!-- card 6-->
+        <div class="relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+        <img src="https://images.unsplash.com/photo-1651841687143-de3f650a7e10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGltYWdlJTIwY2hpYyUyMGR1JTIwbGlldSUyMGRlJTIwdm95YWdlfGVufDB8fDB8fHww" alt="image 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Titre 6</h2>
+          <p class="text-gray-700 mb-4">Description de l'image</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-center">Visitez</button>
+        </div>
+        <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-3xl">
+          100$
+        </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- ######################### -->
+    <!-- Section A propos -->
+    <!-- ####################### -->
+     <section class="bg-slate-900 text-white">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+          <div class="order-2 md:order-1">
+            <img src="https://images.unsplash.com/photo-1559677437-62c20d42dd27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGElMjBqb2llJTIwZGUlMjB2aXZyZXxlbnwwfHwwfHx8MA%3D%3D" alt="La joie de vivre" class="w-full h-auto rounded-lg shadow-lg">
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-4xl text-red-600 uppercase font-black mb-2">
+              A Propos
+            </h2>
+            <p class="text-lg mb-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ipsam quia molestias illum odit nihil veniam excepturi ut eaque quam.
+            </p>
+            <p class="text-lg mb-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ipsam quia molestias illum odit nihil veniam excepturi ut eaque quam.
+            </p>
+            <p class="text-lg mb-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ipsam quia molestias illum odit nihil veniam excepturi ut eaque quam.
+            </p>
+            <p class="text-lg mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores distinctio quae, quas nesciunt voluptatum vero, laboriosam eaque libero ipsa, similique assumenda quam modi qui aperiam tenetur fugit in dolor et.</p>
+            <button class="bg-red-500 text-white px-6 py-3 rounded-full font-semibold animate-pulse">
+              En savoir plus
+            </button>
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- ######################### -->
+    <!-- Contact section -->
+    <!-- ####################### -->
+     <section class="px-4 py-12 contact-bg bg-fixed bg-center bg-cover">
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg bg-opacity-25">
+        <h2 class="text-4xl text-red-600 uppercase font-black mb-2 text-center">
+          Contactez Nous
+        </h2>
+        <p class="text-lg text-gray-600 text-center mb-12">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, impedit?
+        </p>
+        <form action="#" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm text-gray-700 font-medium">Nom</label>
+            <input type="text" id="name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+          </div>
+          <div>
+            <label for="email" class="block text-sm text-gray-700 font-medium">Email</label>
+            <input type="text" id="email" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm text-gray-700 font-medium">Message</label>
+            <textarea  id="message" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+     </section>
+
+    <!-- ######################### -->
+    <!-- Footer section -->
+    <!-- ####################### -->
+    <footer class="bg-gray-900 text-white py-32">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contactez Nous</h3>
+            <p class="text-gray-400">Adresse: Ngousso, Cameroun</p>
+            <p class="text-gray-400">Telephone: +237 674256018</p>
+            <p class="text-gray-400">Email: borellawou.tech@gmail.com</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Liens utiles</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-white">Accueil</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">A propos</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Suivez Nous</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-400">
+                <box-icon name="instagram-alt" type="logo" ></box-icon>
+              </a>
+              <a href="#" class="bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-400">
+                <box-icon name="facebook-circle" type="logo" ></box-icon>
+              </a>
+              <a href="#" class="bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-400">
+                <box-icon name="twitter" type="logo" ></box-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-gray-400 mt-8">
+          &copy; Lawel Academy 2026 - Tous droits reserves
+        </div>
+      </div>
+    </footer>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="app.js"></script>
+  
+</body>
+</html>
